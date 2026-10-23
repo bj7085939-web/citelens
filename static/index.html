@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CiteLens — answers that bring their sources</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">🔎 CiteLens</div>
+  <div id="mode" class="mode">checking mode…</div>
+</header>
+<main>
+  <h1>Ask a question. Get an answer you can check.</h1>
+  <p class="sub">CiteLens searches the live web with Tavily, answers with NVIDIA
+     Nemotron on Nebius Token Factory, and then <em>verifies its own citations</em> —
+     any sentence without a source is flagged, not hidden.</p>
+
+  <form id="ask-form">
+    <input id="q" type="text" autocomplete="off"
+           placeholder="e.g. Why do AI research tools need citations?">
+    <button type="submit" id="go">Research</button>
+  </form>
+  <div id="status" class="status"></div>
+
+  <section id="answer-wrap" hidden>
+    <div class="bar">
+      <h2>Answer</h2>
+      <div id="coverage" class="coverage"></div>
+    </div>
+    <div id="answer" class="answer"></div>
+    <h2>Sources</h2>
+    <div id="sources" class="sources"></div>
+  </section>
+</main>
+<footer>
+  Built for the Nebius × NVIDIA Global AI Hackathon · Best Apps &amp; Agents track ·
+  Retrieval: Tavily · Inference: NVIDIA Nemotron on Nebius Token Factory
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
